@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/band.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatefulWidget {                    //statefulWidget para hacer pruebas locales sobre el contenedor
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -13,19 +13,21 @@ class _HomePageState extends State<HomePage> {
     Band(id: '2', name: 'Queen', votes: 1),
     Band(id: '3', name: 'Heroes del silencio', votes: 2),
     Band(id: '4', name: 'Bon Jovi', votes: 3)
-  ];
-
+  ];    //lista de bandas
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(       //barra arriba
         title: Text('BandNames', style: TextStyle(color: Colors.black87)),
         backgroundColor: Colors.white,
         elevation: 1,
       ),
+
       body: ListView.builder(
           itemCount: bands.length,
-          itemBuilder: (context, i) => _bandTile(bands[i])),
+          itemBuilder: (context, i) => _bandTile(bands[i])
+          ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         elevation: 1,
