@@ -10,9 +10,11 @@ class Band
     required this.votes
   });
 
-  //los sockets responden
-  //factory es un constructor que recibe argumentos
-  //  y crea una instancia de la clase
+  
+  /// factory
+  /// 
+  /// Los sockets desde el back me responden un mapa
+  /// [Map] que es mas facil de usar, va a ser String y dinamico
   factory Band.fromMap(Map<String,dynamic>obj)=> Band(
     id:obj['id'],
     name:obj['name'],
