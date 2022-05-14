@@ -4,6 +4,7 @@ import 'pages/home.dart';
 
 void main() => runApp(MyApp());
 
+/// MyApp
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
